@@ -28,7 +28,7 @@ title: 切角效果
                 radial-gradient(circle at top right, transparent 15px, #fb3 0) top right,
                 radial-gradient(circle at bottom right, transparent 15px, #fb3 0) bottom right,
                 radial-gradient(circle at bottom left, transparent 15px, #fb3 0) bottom left;
-    background-size: 50% 50%;
+    background-size: 51% 51%;
     background-repeat: no-repeat;
   }
   /* 内联 SVG 与 border-image 方案 */
