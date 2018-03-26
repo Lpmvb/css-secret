@@ -1,0 +1,115 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>切角效果 · Test Site</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="切角效果 · Test Site"/><meta property="og:type" content="website"/><meta property="og:url" content="https://facebook.github.io/index.html"/><meta property="og:description" content="```playground"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://facebook.github.io/blog/atom.xml" title="Test Site Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://facebook.github.io/blog/feed.xml" title="Test Site Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible doc"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/en"><img class="logo" src="/img/docusaurus.svg"/><h2 class="headerTitle">Test Site</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/en/example.html" target="_self">Docs</a></li><li class=""><a href="/blog" target="_self">Blog</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/img/language.svg"/>English</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/zh-CN">中文</a></li><li><a href="/en">English</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(){
+          if(languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Shapes</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Backgrounds&amp;Borders</h3><ul><li class="navListItem"><a class="navItem" href="/docs/en/example.html">测试</a></li></ul></div><div class="navGroup navGroupActive"><h3>Shapes</h3><ul><li class="navListItem"><a class="navItem" href="/docs/en/flexible-ellipses.html">自适应的椭圆</a></li><li class="navListItem"><a class="navItem" href="/docs/en/parallelograms.html">平行四边形</a></li><li class="navListItem"><a class="navItem" href="/docs/en/diamond-images.html">菱形图片</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/docs/en/cutout-corners.html">切角效果</a></li><li class="navListItem"><a class="navItem" href="/docs/en/trapezoid-tabs.html">梯形标签页</a></li></ul></div><div class="navGroup navGroupActive"><h3>Visual Effects</h3><ul><li class="navListItem"><a class="navItem" href="/docs/en/example1.html">测试</a></li></ul></div><div class="navGroup navGroupActive"><h3>Hyphenation</h3><ul><li class="navListItem"><a class="navItem" href="/docs/en/example2.html">测试</a></li></ul></div><div class="navGroup navGroupActive"><h3>User Experience</h3><ul><li class="navListItem"><a class="navItem" href="/docs/en/example3.html">测试</a></li></ul></div><div class="navGroup navGroupActive"><h3>Structure&amp;Layout</h3><ul><li class="navListItem"><a class="navItem" href="/docs/en/example4.html">测试</a></li></ul></div><div class="navGroup navGroupActive"><h3>Transitions&amp;Animations</h3><ul><li class="navListItem"><a class="navItem" href="/docs/en/example5.html">测试</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>切角效果</h1></header><article><div><span><pre><code class="hljs html css"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+  <span class="hljs-selector-tag">body</span> { <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>; <span class="hljs-attribute">display</span>: flex; <span class="hljs-attribute">justify-content</span>: center; }
+  <span class="hljs-selector-class">.corners</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">120px</span>; <span class="hljs-attribute">height</span>: <span class="hljs-number">120px</span>; <span class="hljs-attribute">margin</span>: <span class="hljs-number">40px</span> <span class="hljs-number">30px</span>; <span class="hljs-attribute">background</span>: <span class="hljs-number">#fb3</span>;
+  }
+  <span class="hljs-comment">/* CSS 渐变方案 */</span>
+  <span class="hljs-selector-class">.corners</span><span class="hljs-selector-pseudo">:nth-of-type(1)</span> {
+    <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(-45deg, transparent 15px, #fb3 0);
+  }
+  <span class="hljs-selector-class">.corners</span><span class="hljs-selector-pseudo">:nth-of-type(2)</span> {
+    <span class="hljs-attribute">background</span>: <span class="hljs-built_in">linear-gradient</span>(135deg, transparent 15px, #fb3 0) top left,
+                <span class="hljs-built_in">linear-gradient</span>(-135deg, transparent 15px, #fb3 0) top right,
+                <span class="hljs-built_in">linear-gradient</span>(-45deg, transparent 15px, #fb3 0) bottom right,
+                <span class="hljs-built_in">linear-gradient</span>(45deg, transparent 15px, #fb3 0) bottom left;
+    <span class="hljs-attribute">background-size</span>: <span class="hljs-number">50%</span> <span class="hljs-number">50%</span>;
+    <span class="hljs-attribute">background-repeat</span>: no-repeat;
+  }
+  <span class="hljs-selector-class">.corners</span><span class="hljs-selector-pseudo">:nth-of-type(3)</span> {
+    <span class="hljs-attribute">background</span>: <span class="hljs-built_in">radial-gradient</span>(circle at top left, transparent 15px, #fb3 0) top left,
+                <span class="hljs-built_in">radial-gradient</span>(circle at top right, transparent 15px, #fb3 0) top right,
+                <span class="hljs-built_in">radial-gradient</span>(circle at bottom right, transparent 15px, #fb3 0) bottom right,
+                <span class="hljs-built_in">radial-gradient</span>(circle at bottom left, transparent 15px, #fb3 0) bottom left;
+    <span class="hljs-attribute">background-size</span>: <span class="hljs-number">50%</span> <span class="hljs-number">50%</span>;
+    <span class="hljs-attribute">background-repeat</span>: no-repeat;
+  }
+  <span class="hljs-comment">/* 内联 SVG 与 border-image 方案 */</span>
+  <span class="hljs-selector-class">.corners</span><span class="hljs-selector-pseudo">:nth-of-type(4)</span> {
+    <span class="hljs-attribute">box-sizing</span>: border-box;
+    <span class="hljs-attribute">background-clip</span>: padding-box;
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">15px</span> solid transparent;
+    <span class="hljs-attribute">border-image</span>: <span class="hljs-number">1</span> <span class="hljs-built_in">url</span>(<span class="hljs-string">'data:image/svg+xml,\
+      &lt;svg xmlns="http://www.w3.org/2000/svg"\
+      width="3" height="3" fill="%23fb3"&gt;\
+      &lt;polygon points="0,1 1,0 2,0 3,1 3,2 2,3 1,3 0,2"/&gt;\
+      &lt;/svg&gt;'</span>);
+  }
+  <span class="hljs-comment">/* 裁切路径方案 */</span>
+  <span class="hljs-selector-class">.corners</span><span class="hljs-selector-pseudo">:nth-of-type(5)</span> {
+    <span class="hljs-attribute">clip-path</span>: <span class="hljs-built_in">polygon</span>(15px 0, calc(100% - 15px) <span class="hljs-number">0</span>, <span class="hljs-number">100%</span> <span class="hljs-number">15px</span>, <span class="hljs-number">100%</span> <span class="hljs-built_in">calc</span>(100% - 15px),
+      <span class="hljs-built_in">calc</span>(100% - 15px) <span class="hljs-number">100%</span>, <span class="hljs-number">15px</span> <span class="hljs-number">100%</span>, <span class="hljs-number">0</span> <span class="hljs-built_in">calc</span>(100% - 15px), <span class="hljs-number">0</span> <span class="hljs-number">15px</span>);
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"corners"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"corners"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"corners"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"corners"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"corners"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre><iframe class="code-playground" width="100%" srcdoc="&lt;style&gt;
+  body { margin: 0; display: flex; justify-content: center; }
+  .corners {
+    width: 120px; height: 120px; margin: 40px 30px; background: #fb3;
+  }
+  /* CSS 渐变方案 */
+  .corners:nth-of-type(1) {
+    background: linear-gradient(-45deg, transparent 15px, #fb3 0);
+  }
+  .corners:nth-of-type(2) {
+    background: linear-gradient(135deg, transparent 15px, #fb3 0) top left,
+                linear-gradient(-135deg, transparent 15px, #fb3 0) top right,
+                linear-gradient(-45deg, transparent 15px, #fb3 0) bottom right,
+                linear-gradient(45deg, transparent 15px, #fb3 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  .corners:nth-of-type(3) {
+    background: radial-gradient(circle at top left, transparent 15px, #fb3 0) top left,
+                radial-gradient(circle at top right, transparent 15px, #fb3 0) top right,
+                radial-gradient(circle at bottom right, transparent 15px, #fb3 0) bottom right,
+                radial-gradient(circle at bottom left, transparent 15px, #fb3 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  /* 内联 SVG 与 border-image 方案 */
+  .corners:nth-of-type(4) {
+    box-sizing: border-box;
+    background-clip: padding-box;
+    border: 15px solid transparent;
+    border-image: 1 url('data:image/svg+xml,\
+      &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;\
+      width=&quot;3&quot; height=&quot;3&quot; fill=&quot;%23fb3&quot;&gt;\
+      &lt;polygon points=&quot;0,1 1,0 2,0 3,1 3,2 2,3 1,3 0,2&quot;/&gt;\
+      &lt;/svg&gt;');
+  }
+  /* 裁切路径方案 */
+  .corners:nth-of-type(5) {
+    clip-path: polygon(15px 0, calc(100% - 15px) 0, 100% 15px, 100% calc(100% - 15px),
+      calc(100% - 15px) 100%, 15px 100%, 0 calc(100% - 15px), 0 15px);
+  }
+&lt;/style&gt;
+&lt;body&gt;
+  &lt;div class=&quot;corners&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;corners&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;corners&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;corners&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;corners&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+" frameborder="0" scrolling="no" onload="this.style.height=this.contentDocument.body.scrollHeight +'px';"></iframe></span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="diamond-images.html">← 菱形图片</a><a class="docs-next button" href="trapezoid-tabs.html">梯形标签页 →</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/docusaurus.svg" alt="Test Site" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/facebook/test-site" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://code.facebook.com/projects/" target="_blank" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2018 Your Name or Your Company Name</section></footer></div></body></html>
