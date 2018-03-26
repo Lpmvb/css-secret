@@ -6,6 +6,12 @@ p {
 .mainContainer .wrapper p, .blockElement p, .mainContainer .wrapper ul li, .mainContainer .wrapper ol li {
   max-width: 100%;
 }
+.code-playground {
+  overflow: visible;
+  border: 2px solid rgba(116, 130, 109, .8);
+  border-radius: .3em;
+  /* min-height: 300px; */
+}
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
 

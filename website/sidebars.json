@@ -1,8 +1,18 @@
 {
   "docs": {
-    "Docusaurus": ["doc1"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
+    "Backgrounds&Borders": ["example"],
+    "Shapes": [
+      "flexible-ellipses",
+      "parallelograms",
+      "diamond-images",
+      "cutout-corners",
+      "trapezoid-tabs"
+    ],
+    "Visual Effects": ["example1"],
+    "Hyphenation": ["example2"],
+    "User Experience": ["example3"],
+    "Structure&Layout": ["example4"],
+    "Transitions&Animations": ["example5"]
   },
   "docs-other": {
     "First Category": ["doc4", "doc5"]

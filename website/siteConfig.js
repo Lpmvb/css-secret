@@ -16,13 +16,13 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Test Site' /* title for your website */,
+  title: 'Test Site',
   tagline: 'A website for testing',
-  url: 'https://facebook.github.io' /* your website url */,
-  baseUrl: '/test-site/' /* base url for your project */,
+  url: 'https://facebook.github.io',
+  baseUrl: '/',
   projectName: 'test-site',
   headerLinks: [
-    {doc: 'doc1', label: 'Docs'},
+    {doc: 'example', label: 'Docs'},
     {blog: true, label: 'Blog'},
   ],
   users,
@@ -35,17 +35,6 @@ const siteConfig = {
     primaryColor: '#75836e',
     secondaryColor: '#AAB8A3',
   },
-  /* custom fonts for website */
-  /*fonts: {
-    myFont: [
-      "Times New Roman",
-      "Serif"
-    ],
-    myOtherFont: [
-      "-apple-system",
-      "system-ui"
-    ]
-  },*/
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright:
     'Copyright © ' +
@@ -60,8 +49,6 @@ const siteConfig = {
   scripts: ['https://buttons.github.io/buttons.js'],
   // You may provide arbitrary config keys to be used as needed by your template.
   repoUrl: 'https://github.com/facebook/test-site',
-  /* On page navigation for the current documentation page */
-  // onPageNav: 'separate',
 };
 
 module.exports = siteConfig;
