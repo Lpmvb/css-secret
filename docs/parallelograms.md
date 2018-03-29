@@ -7,7 +7,7 @@ title: 平行四边形
 
 ```playground
 <style>
-  body { margin: 0; display: flex; justify-content: center; }
+  body { margin: 0; display: flex; justify-content: center; flex-wrap: wrap; }
   .parallelograms {
     width: 160px; height: 120px; margin: 20px 30px;
     display: flex; justify-content: center; align-items: center;

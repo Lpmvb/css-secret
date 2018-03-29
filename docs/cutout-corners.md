@@ -7,7 +7,7 @@ title: 切角效果
 
 ```playground
 <style>
-  body { margin: 0; display: flex; justify-content: center; }
+  body { margin: 0; display: flex; justify-content: center; flex-wrap: wrap; }
   .corners {
     width: 120px; height: 120px; margin: 40px 30px; background: #fb3;
   }

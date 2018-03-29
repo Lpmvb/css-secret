@@ -7,7 +7,7 @@ title: 自适应的椭圆
 
 ```playground
 <style>
-  body { margin: 0; display: flex; justify-content: center; }
+  body { margin: 0; display: flex; justify-content: center; flex-wrap: wrap; }
   .ellipses {
     background: #fb3; width: 160px; height: 120px; margin: 20px 10px;
   }

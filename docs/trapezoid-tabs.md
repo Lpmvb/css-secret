@@ -7,7 +7,7 @@ title: 梯形标签页
 
 ```playground
 <style>
-  body { margin: 0; display: flex; justify-content: center; }
+  body { margin: 0; display: flex; justify-content: center; flex-wrap: wrap; }
   .trapezoid {
     width: 120px; height: 120px; margin: 40px 30px;
     position: relative;
