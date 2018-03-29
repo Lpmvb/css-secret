@@ -1,0 +1,47 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>逐帧动画 · Test Site</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="逐帧动画 · Test Site"/><meta property="og:type" content="website"/><meta property="og:url" content="https://facebook.github.io/css-secret/index.html"/><meta property="og:description" content="```playground"/><link rel="shortcut icon" href="/css-secret/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://facebook.github.io/blog/atom.xml" title="Test Site Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://facebook.github.io/blog/feed.xml" title="Test Site Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css-secret/css/main.css"/></head><body class="sideNavVisible doc"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/css-secret/en"><img class="logo" src="/css-secret/img/docusaurus.svg"/><h2 class="headerTitle">Test Site</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/css-secret/docs/en/example.html" target="_self">Docs</a></li><li class=""><a href="/css-secret/blog" target="_self">Blog</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/css-secret/img/language.svg"/>English</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/css-secret/zh-CN">中文</a></li><li><a href="/css-secret/en">English</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(){
+          if(languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Transitions&amp;Animations</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Backgrounds&amp;Borders</h3><ul><li class="navListItem"><a class="navItem" href="/css-secret/docs/en/example.html">测试</a></li></ul></div><div class="navGroup navGroupActive"><h3>Shapes</h3><ul><li class="navListItem"><a class="navItem" href="/css-secret/docs/en/flexible-ellipses.html">自适应的椭圆</a></li><li class="navListItem"><a class="navItem" href="/css-secret/docs/en/parallelograms.html">平行四边形</a></li><li class="navListItem"><a class="navItem" href="/css-secret/docs/en/diamond-images.html">菱形图片</a></li><li class="navListItem"><a class="navItem" href="/css-secret/docs/en/cutout-corners.html">切角效果</a></li><li class="navListItem"><a class="navItem" href="/css-secret/docs/en/trapezoid-tabs.html">梯形标签页</a></li><li class="navListItem"><a class="navItem" href="/css-secret/docs/en/simple-pie-charts.html">简单的饼图</a></li></ul></div><div class="navGroup navGroupActive"><h3>Visual Effects</h3><ul><li class="navListItem"><a class="navItem" href="/css-secret/docs/en/one-side-shadows.html">单侧投影</a></li><li class="navListItem"><a class="navItem" href="/css-secret/docs/en/irregular-drop-shadows.html">不规则投影</a></li><li class="navListItem"><a class="navItem" href="/css-secret/docs/en/color-tinting.html">染色效果</a></li><li class="navListItem"><a class="navItem" href="/css-secret/docs/en/frosted-glass-effect.html">毛玻璃效果</a></li></ul></div><div class="navGroup navGroupActive"><h3>Hyphenation</h3><ul><li class="navListItem"><a class="navItem" href="/css-secret/docs/en/circular-text.html">环形文字</a></li></ul></div><div class="navGroup navGroupActive"><h3>User Experience</h3><ul><li class="navListItem"><a class="navItem" href="/css-secret/docs/en/interactive-image-comparison.html">交互式图片对比控件</a></li></ul></div><div class="navGroup navGroupActive"><h3>Structure&amp;Layout</h3><ul><li class="navListItem"><a class="navItem" href="/css-secret/docs/en/example4.html">测试</a></li></ul></div><div class="navGroup navGroupActive"><h3>Transitions&amp;Animations</h3><ul><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/css-secret/docs/en/frame-by-frame-animations.html">逐帧动画</a></li><li class="navListItem"><a class="navItem" href="/css-secret/docs/en/blinking.html">闪烁效果</a></li><li class="navListItem"><a class="navItem" href="/css-secret/docs/en/typing-animation.html">打字动画</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>逐帧动画</h1></header><article><div><span><pre><code class="hljs html css"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+  @<span class="hljs-keyword">keyframes</span> loader {
+    <span class="hljs-selector-tag">to</span> { <span class="hljs-attribute">background-position</span>: -<span class="hljs-number">800px</span> <span class="hljs-number">0</span>; }
+  }
+  <span class="hljs-selector-tag">body</span> { <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>; <span class="hljs-attribute">display</span>: flex; <span class="hljs-attribute">justify-content</span>: center; <span class="hljs-attribute">flex-wrap</span>: wrap; }
+  <span class="hljs-selector-class">.loader</span> {
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">40px</span> <span class="hljs-number">30px</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>; <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">background</span>: <span class="hljs-built_in">url</span>(../assets/loader.png) <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">animation</span>: loader <span class="hljs-number">1s</span> infinite <span class="hljs-built_in">steps</span>(8);
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"loader"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre><iframe class="code-playground" width="100%" srcdoc="&lt;style&gt;
+  @keyframes loader {
+    to { background-position: -800px 0; }
+  }
+  body { margin: 0; display: flex; justify-content: center; flex-wrap: wrap; }
+  .loader {
+    margin: 40px 30px;
+    width: 100px; height: 100px;
+    background: url(../assets/loader.png) 0 0;
+    animation: loader 1s infinite steps(8);
+  }
+&lt;/style&gt;
+&lt;body&gt;
+  &lt;div class=&quot;loader&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+" frameborder="0" scrolling="no" onload="this.style.height=this.contentDocument.body.scrollHeight +'px';"></iframe></span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="example4.html">← 测试</a><a class="docs-next button" href="blinking.html">闪烁效果 →</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/css-secret/" class="nav-home"><img src="/css-secret/img/docusaurus.svg" alt="Test Site" width="66" height="58"/></a><div><h5>Docs</h5><a href="/css-secret/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/css-secret/docs/en/doc2.html">Guides (or other categories)</a><a href="/css-secret/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/css-secret/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank">Twitter</a></div><div><h5>More</h5><a href="/css-secret/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" href="https://github.com/facebook/test-site" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://code.facebook.com/projects/" target="_blank" class="fbOpenSource"><img src="/css-secret/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2018 Your Name or Your Company Name</section></footer></div></body></html>
