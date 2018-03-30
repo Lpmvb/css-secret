@@ -13,7 +13,8 @@
       "one-side-shadows",
       "irregular-drop-shadows",
       "color-tinting",
-      "frosted-glass-effect"
+      "frosted-glass-effect",
+      "folded-corner-effect"
     ],
     "Hyphenation": [
       "circular-text"
